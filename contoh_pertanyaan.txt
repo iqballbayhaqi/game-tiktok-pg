@@ -1,0 +1,49 @@
+Siapa penemu lampu pijar?|Thomas Edison|Alexander Graham Bell|Galileo Galilei|Nikola Tesla|A
+Apa nama ibukota Prancis?|Paris|Berlin|London|Madrid|A
+Berapa jumlah planet dalam tata surya kita?|7|8|9|10|B
+Apa singkatan dari Organisasi Negara-negara Pengekspor Minyak?|ONU|OPEC|NATO|UNESCO|B
+Apa warna bendera Jepang?|Merah|Biru|Putih|Kuning|C
+Apa nama ibukota Australia?|Sydney|Melbourne|Canberra|Brisbane|C
+Siapa penulis novel "Harry Potter"?|J.K. Rowling|George Orwell|Stephen King|Agatha Christie|A
+Apa singkatan dari Organisasi Bangsa-Bangsa Bersatu?|OBB|OBBM|UN|OBG|C
+Apa nama samudra terbesar di dunia?|Samudra Hindia|Samudra Atlantik|Samudra Pasifik|Samudra Arktik|C
+Berapa banyak kontinu di dunia ini?|4|5|6|7|B
+Apa nama planet terbesar di tata surya kita?|Mars|Venus|Jupiter|Saturnus|C
+Siapa presiden pertama Amerika Serikat?|George Washington|Abraham Lincoln|Thomas Jefferson|John Adams|A
+Apa yang menjadi logo Twitter?|Burung|Lambang tanda tanya|Lambang panah|Lambang hati|A
+Apa singkatan dari GPS?|Global Positioning System|Great Power Society|General Public Service|Global Postal Service|A
+Apa warna matahari saat terbenam?|Merah|Kuning|Oranye|Coklat|A
+Apa nama sungai terpanjang di dunia?|Sungai Nil|Sungai Amazon|Sungai Mississippi|Sungai Yangtze|A
+Siapa pencipta teori relativitas?|Isaac Newton|Albert Einstein|Galileo Galilei|Stephen Hawking|B
+Apa singkatan dari HTML?|Hyper Text Markup Language|High Technology Modern Language|Hyperlink Text Management Language|Highly Technical Marketing Language|A
+Apa nama ibukota Rusia?|Moskow|St. Petersburg|Kiev|Kazan|A
+Apa singkatan dari ASAP?|As Soon As Possible|After Several Attempted Projects|Always Say And Pray|All Systems Are Perfect|A
+Apa nama ibukota Argentina?|Buenos Aires|Santiago|Lima|Bogota|A
+Siapa penulis novel "To Kill a Mockingbird"?|Harper Lee|John Steinbeck|F. Scott Fitzgerald|Mark Twain|A
+Apa nama benua terbesar di dunia?|Asia|Amerika|Afrika|Eropa|A
+Apa warna bendera Kanada?|Merah|Putih|Biru|Hijau|A
+Apa nama ibukota India?|Delhi|Mumbai|Kolkata|Chennai|A
+Siapa pelukis terkenal dengan lukisan "Mona Lisa"?|Leonardo da Vinci|Pablo Picasso|Vincent van Gogh|Michelangelo|A
+Apa singkatan dari DVD?|Digital Video Disc|Dynamic Virtual Display|Data Verification Device|Digital Voice Decoder|A
+Berapa jumlah gigi dewasa pada manusia?|20|28|32|36|C
+Apa nama samudra yang terletak di sebelah selatan Australia?|Samudra Hindia|Samudra Atlantik|Samudra Pasifik|Samudra Arktik|A
+Siapa presiden Amerika Serikat ke-16?|Abraham Lincoln|Andrew Johnson|Theodore Roosevelt|Abraham Lincoln|C
+Apa nama benua yang disebut sebagai "Benua Es"?|Asia|Amerika|Antarktika|Eropa|C
+Apa singkatan dari NASA?|National Aeronautics and Space Administration|North American Science Association|National Association of Space Agencies|New Age Space Adventure|A
+Apa yang menjadi logo Google?|Huruf "G"|Bintang|Bumi|Awan|A
+Apa nama ibukota China?|Shanghai|Beijing|Guangzhou|Shenzhen|B
+Apa singkatan dari CEO?|Chief Executive Officer|Chief Engineering Officer|Corporate Excellence Organizer|Creative Energy Organizer|A
+Siapa penulis drama "Romeo and Juliet"?|William Shakespeare|Charles Dickens|Jane Austen|Emily Brontë|A
+Apa nama ibukota Jerman?|Berlin|Munich|Hamburg|Frankfurt|A
+Siapa ilmuwan yang merumuskan hukum gravitasi?|Isaac Newton|Albert Einstein|Stephen Hawking|Galileo Galilei|A
+Apa singkatan dari CPU?|Central Processing Unit|Computer Programming Unit|Control Panel Unit|Central Power Unit|A
+Apa nama sungai terpanjang di Amerika Utara?|Sungai Amazon|Sungai Mississippi|Sungai Missouri|Sungai Columbia|B
+Apa singkatan dari AIDS?|Acquired Immune Deficiency Syndrome|Active Infection and Disease Syndrome|Autoimmune Infection Development Syndrome|Acute Inflammatory Disease Syndrome|A
+Siapa penulis novel "1984"?|George Orwell|Aldous Huxley|Ray Bradbury|Kurt Vonnegut|A
+Apa singkatan dari FBI?|Federal Bureau of Investigation|Federal Bureau of Information|Federal Bureau of Incidents|Federal Bureau of International|A
+Apa nama bintang terdekat dengan Bumi?|Sirius|Proxima Centauri|Alpha Centauri|Betelgeuse|B
+Siapa pelukis terkenal dengan lukisan "The Starry Night"?|Leonardo da Vinci|Pablo Picasso|Vincent van Gogh|Claude Monet|C
+Apa nama ibukota Brazil?|Rio de Janeiro|Brasília|São Paulo|Salvador|B
+Apa singkatan dari CIA?|Central Intelligence Agency|Central Investigative Agency|Covert Intelligence Agency|Computer Information Association|A
+Apa yang menjadi lambang perdamaian dunia?|Bunga|Tangan terbuka|Burung merpati|Tanda seru|C
+Siapa penulis novel "The Great Gatsby"?|F. Scott Fitzgerald|Ernest Hemingway|John Steinbeck|Mark Twain|A

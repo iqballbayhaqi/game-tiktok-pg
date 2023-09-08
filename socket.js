@@ -1,0 +1,225 @@
+// const titktokUsername = "mps_militanprabowo_s";
+let msgId;
+const username = "admin";
+const password = "supersecret";
+
+const key1 = sessionStorage.getItem("key1");
+const key2 = sessionStorage.getItem("key2");
+const key3 = sessionStorage.getItem("key3");
+const key4 = sessionStorage.getItem("key4");
+
+sessionStorage.setItem("memberKey1", JSON.stringify([]));
+sessionStorage.setItem("memberKey2", JSON.stringify([]));
+sessionStorage.setItem("memberKey3", JSON.stringify([]));
+sessionStorage.setItem("memberKey4", JSON.stringify([]));
+sessionStorage.setItem("idMemberKey1", JSON.stringify([]));
+sessionStorage.setItem("idMemberKey2", JSON.stringify([]));
+sessionStorage.setItem("idMemberKey3", JSON.stringify([]));
+sessionStorage.setItem("idMemberKey4", JSON.stringify([]));
+
+const connectSocket = (titktokUsername) => {
+  const url = `https://tiktoktu.mitrajavapulsa.com/connectLive/${titktokUsername}/1234/TEBAK`;
+  const headers = new Headers();
+  headers.append("Authorization", "Basic " + btoa(username + ":" + password));
+  
+  fetch(url, {
+    method: "GET",
+    headers: headers,
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const socket = io("https://tiktok.mitrajavapulsa.com", { secure: true });
+
+      socket.on("connect", () => {
+        $("#status-connect").html("Tersambung");
+        $("#status-connect").css("color", "green");
+        console.log("Terhubung ke server");
+      });
+
+      socket.on("chat", (arg) => {
+        if (arg.room === `room_${titktokUsername}`) {
+          if (msgId !== arg.message.msgId) {
+            if (
+              arg.message.comment.toLowerCase().includes(key1.toLowerCase()) &&
+              !JSON.parse(sessionStorage.getItem("idMemberKey1")).includes(
+                arg.message.userId
+              )
+            ) {
+              sessionStorage.setItem(
+                "memberKey1",
+                JSON.stringify(
+                  JSON.parse(sessionStorage.getItem("memberKey1")).concat(
+                    arg.message
+                  )
+                )
+              );
+              sessionStorage.setItem(
+                "idMemberKey1",
+                JSON.stringify(
+                  JSON.parse(sessionStorage.getItem("idMemberKey1")).concat(
+                    arg.message.userId
+                  )
+                )
+              );
+            }
+
+            if (
+              arg.message.comment.toLowerCase().includes(key2.toLowerCase()) &&
+              !JSON.parse(sessionStorage.getItem("idMemberKey2")).includes(
+                arg.message.userId
+              )
+            ) {
+              sessionStorage.setItem(
+                "memberKey2",
+                JSON.stringify(
+                  JSON.parse(sessionStorage.getItem("memberKey2")).concat(
+                    arg.message
+                  )
+                )
+              );
+              sessionStorage.setItem(
+                "idMemberKey2",
+                JSON.stringify(
+                  JSON.parse(sessionStorage.getItem("idMemberKey2")).concat(
+                    arg.message.userId
+                  )
+                )
+              );
+            }
+
+            if (
+              arg.message.comment.toLowerCase().includes(key3.toLowerCase()) &&
+              !JSON.parse(sessionStorage.getItem("idMemberKey3")).includes(
+                arg.message.userId
+              )
+            ) {
+              sessionStorage.setItem(
+                "memberKey3",
+                JSON.stringify(
+                  JSON.parse(sessionStorage.getItem("memberKey3")).concat(
+                    arg.message
+                  )
+                )
+              );
+              sessionStorage.setItem(
+                "idMemberKey3",
+                JSON.stringify(
+                  JSON.parse(sessionStorage.getItem("idMemberKey3")).concat(
+                    arg.message.userId
+                  )
+                )
+              );
+            }
+
+            if (
+              arg.message.comment.toLowerCase().includes(key4.toLowerCase()) &&
+              !JSON.parse(sessionStorage.getItem("idMemberKey4")).includes(
+                arg.message.userId
+              )
+            ) {
+              sessionStorage.setItem(
+                "memberKey4",
+                JSON.stringify(
+                  JSON.parse(sessionStorage.getItem("memberKey4")).concat(
+                    arg.message
+                  )
+                )
+              );
+              sessionStorage.setItem(
+                "idMemberKey4",
+                JSON.stringify(
+                  JSON.parse(sessionStorage.getItem("idMemberKey4")).concat(
+                    arg.message.userId
+                  )
+                )
+              );
+            }
+          }
+        }
+      });
+
+      socket.on("disconnect", () => {
+        console.log("Terputus dari server");
+      });
+    })
+    .catch((error) => {
+      console.error("There was a problem with the fetch operation:", error);
+    });
+};
+
+$("#connect-socket").on("click", () => {
+  const username = $("#input-username").val();
+  connectSocket(username);
+});
+
+setInterval(() => {
+  const memberKey1UI = $("#member-area-1").children().children().length;
+  const memberKey2UI = $("#member-area-2").children().children().length;
+  const memberKey3UI = $("#member-area-3").children().children().length;
+  const memberKey4UI = $("#member-area-4").children().children().length;
+
+  if (memberKey1UI % 3 === 0) {
+    const newDiv = $("<div>");
+    newDiv.append(
+      "<div class='profile-member-non-vip animate__animated animate__backInUp animate__sp'></div>"
+    );
+    $("#member-area-1").append(newDiv);
+  } else {
+    $("#member-area-1")
+      .children()
+      .last()
+      .append(
+        "<div class='profile-member-non-vip animate__animated animate__backInUp animate__sp'></div>"
+      );
+  }
+
+  if (memberKey2UI % 3 === 0) {
+    const newDiv = $("<div>");
+    newDiv.append(
+      "<div class='profile-member-non-vip animate__animated animate__backInUp animate__sp'></div>"
+    );
+    $("#member-area-2").append(newDiv);
+  } else {
+    $("#member-area-2")
+      .children()
+      .last()
+      .append(
+        "<div class='profile-member-non-vip animate__animated animate__backInUp animate__sp'></div>"
+      );
+  }
+
+  if (memberKey3UI % 3 === 0) {
+    const newDiv = $("<div>");
+    newDiv.append(
+      "<div class='profile-member-non-vip animate__animated animate__backInUp animate__sp'></div>"
+    );
+    $("#member-area-3").append(newDiv);
+  } else {
+    $("#member-area-3")
+      .children()
+      .last()
+      .append(
+        "<div class='profile-member-non-vip animate__animated animate__backInUp animate__sp'></div>"
+      );
+  }
+
+  if (memberKey4UI % 3 === 0) {
+    const newDiv = $("<div>");
+    newDiv.append(
+      "<div class='profile-member-non-vip animate__animated animate__backInUp animate__sp'></div>"
+    );
+    $("#member-area-4").append(newDiv);
+  } else {
+    $("#member-area-4")
+      .children()
+      .last()
+      .append(
+        "<div class='profile-member-non-vip animate__animated animate__backInUp animate__sp'></div>"
+      );
+  }
+}, 1000);

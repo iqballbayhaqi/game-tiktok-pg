@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TikTok Game Pilihan Ganda</title>
+    <link rel="stylesheet" type="text/css" href="global.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body id="body">
+    <div class="container-mobile">
+      <div class="row gx-3">
+        <div class="col">
+          <p class="score" id="score1">0</p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRMVVzolQkwL4kK9HJ9tQBKr6SdnkX882mMy8ZXZeiCQkMvQw6iB7YqeTKTd6AabKs11E&usqp=CAU"
+            class="img-thumbnail img-custome"
+            id="img-thumbnail-1"
+            alt="..."
+          />
+          <p class="h6 title text-truncate" id="key1">-</p>
+          <div class="vip-group">
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div class="vip-label"><p>VIP SEAT</p></div>
+          </div>
+        </div>
+        <div class="col">
+          <p class="score" id="score2">0</p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRMVVzolQkwL4kK9HJ9tQBKr6SdnkX882mMy8ZXZeiCQkMvQw6iB7YqeTKTd6AabKs11E&usqp=CAU"
+            class="img-thumbnail img-custome"
+            id="img-thumbnail-2"
+            alt="..."
+          />
+          <p class="h6 title text-truncate" id="key2">-</p>
+          <div class="vip-group">
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div class="vip-label"><p>VIP SEAT</p></div>
+          </div>
+        </div>
+        <div class="col">
+          <p class="score" id="score3">0</p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRMVVzolQkwL4kK9HJ9tQBKr6SdnkX882mMy8ZXZeiCQkMvQw6iB7YqeTKTd6AabKs11E&usqp=CAU"
+            class="img-thumbnail img-custome"
+            id="img-thumbnail-3"
+            alt="..."
+          />
+          <p class="h6 title text-truncate" id="key3">-</p>
+          <div class="vip-group">
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div class="vip-label"><p>VIP SEAT</p></div>
+          </div>
+        </div>
+        <div class="col">
+          <p class="score" id="score4">0</p>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRMVVzolQkwL4kK9HJ9tQBKr6SdnkX882mMy8ZXZeiCQkMvQw6iB7YqeTKTd6AabKs11E&usqp=CAU"
+            class="img-thumbnail img-custome"
+            id="img-thumbnail-4"
+            alt="..."
+          />
+          <p class="h6 title text-truncate" id="key4">-</p>
+          <div class="vip-group">
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div>
+              <div class="profile-member"></div>
+              <div class="profile-member"></div>
+            </div>
+            <div class="vip-label"><p>VIP SEAT</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="row gx-3 non-vip-wrapper">
+          <div class="col">
+            <div class="non-vip" id="member-area-1">
+            </div>
+          </div>
+          <div class="col">
+            <div class="non-vip" id="member-area-2">
+            </div>
+          </div>
+          <div class="col">
+            <div class="non-vip" id="member-area-3">
+            </div>
+          </div>
+          <div class="col">
+            <div class="non-vip" id="member-area-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kontrol Panel -->
+    <div class="kontrol-panel-container">
+      <div class="kontrol-panel-head">
+        <p>Kontrol Panel</p>
+        <button type="button" class="btn btn-danger btn-sm">close</button>
+      </div>
+
+      <div class="kontrol-panel-body border-bottom">
+        <p class="text-small-cs text-muted">
+          <b> Lisensi </b>
+        </p>
+        <div class="input-group input-group-sm mb-2">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="masukan lisensi"
+            aria-label="Lisensi"
+            aria-describedby="lisensi"
+          />
+        </div>
+
+        <div class="input-group input-group-sm mb-2">
+          <span class="input-group-text" id="basic-addon1">@</span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="masukan username tiktok kamu"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            id="input-username"
+          />
+        </div>
+        <button type="button" class="btn btn-primary btn-sm mb-2 w-100" id="connect-socket">
+          Connect
+        </button>
+        <p class="text-small-cs text-muted">
+          <b> Status: </b>
+        </p>
+        <p class="text-small-cs mb-2" id="status-connect">Tidak Terhubung</p>
+      </div>
+
+      <div class="kontrol-panel-body border-bottom">
+        <button
+          type="button"
+          class="btn btn-primary btn-sm mb-2 w-100"
+          id="mulai"
+        >
+          Mulai
+        </button>
+      </div>
+
+      <div class="kontrol-panel-body border-bottom">
+        <p class="text-small-cs text-muted mb-3">
+          <b> Catatan: </b>
+          <span
+            >Harap mulai LIVE Streaming Anda di TikTok terlebih dahulu, sebelum
+            terhubung ke live chat feed Anda.</span
+          >
+        </p>
+        <button
+          id="f11button"
+          isFullScreen="false"
+          type="button"
+          class="btn btn-outline-primary btn-sm w-100 mb-2"
+        >
+          (F11) Layar Penuh
+        </button>
+
+        <p class="text-small-cs text-muted">
+          <b> Durasi Popup Gifter: </b>
+        </p>
+        <div class="input-group input-group-sm mb-2">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="score slot 1"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            value="0"
+          />
+        </div>
+
+        <p class="text-small-cs text-muted">
+          <b> Durasi 1 Pertanyaan: </b>
+        </p>
+        <div class="input-group input-group-sm mb-2">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="score slot 1"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            value="0"
+          />
+        </div>
+
+        <p class="text-small-cs text-muted">
+          <b> CD Pertanyaan Selanjutnya: </b>
+        </p>
+        <div class="input-group input-group-sm mb-2">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="score slot 1"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+            value="0"
+          />
+        </div>
+      </div>
+
+      <div class="kontrol-panel-body border-bottom">
+        <p class="text-small-cs text-muted accordion-header">
+          <b> Masukan Gambar </b>
+          <span id="hideGambarSection" isOpen="true" class="hide-section"
+            >( Hide Section )</span
+          >
+        </p>
+        <div id="slotGambarBody">
+          <p class="text-small-cs text-muted"><b>Slot 1</b></p>
+          <div>
+            <div class="imgUp" slot="1">
+              <div class="imagePreview"></div>
+              <label class="btn btn-primary btn-sm">
+                Upload
+                <input
+                  type="file"
+                  class="uploadFile img"
+                  value="Upload Photo"
+                  style="width: 0px; height: 0px; overflow: hidden"
+                />
+              </label>
+            </div>
+            <div class="input-group input-group-sm mb-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="kata kunci"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                id="setKey1"
+              />
+            </div>
+          </div>
+
+          <p class="text-small-cs text-muted"><b>Slot 2</b></p>
+          <div>
+            <div class="imgUp" slot="2">
+              <div class="imagePreview"></div>
+              <label class="btn btn-primary btn-sm">
+                Upload
+                <input
+                  type="file"
+                  class="uploadFile img"
+                  value="Upload Photo"
+                  style="width: 0px; height: 0px; overflow: hidden"
+                />
+              </label>
+            </div>
+            <div class="input-group input-group-sm mb-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="kata kunci"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                id="setKey2"
+              />
+            </div>
+          </div>
+
+          <p class="text-small-cs text-muted"><b>Slot 3</b></p>
+          <div>
+            <div class="imgUp" slot="3">
+              <div class="imagePreview"></div>
+              <label class="btn btn-primary btn-sm">
+                Upload
+                <input
+                  type="file"
+                  class="uploadFile img"
+                  value="Upload Photo"
+                  style="width: 0px; height: 0px; overflow: hidden"
+                />
+              </label>
+            </div>
+            <div class="input-group input-group-sm mb-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="kata kunci"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                id="setKey3"
+              />
+            </div>
+          </div>
+
+          <p class="text-small-cs text-muted"><b>Slot 4</b></p>
+          <div>
+            <div class="imgUp" slot="4">
+              <div class="imagePreview"></div>
+              <label class="btn btn-primary btn-sm">
+                Upload
+                <input
+                  type="file"
+                  class="uploadFile img"
+                  value="Upload Photo"
+                  style="width: 0px; height: 0px; overflow: hidden"
+                />
+              </label>
+            </div>
+            <div class="input-group input-group-sm mb-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="kata kunci"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                id="setKey4"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kontrol-panel-body border-bottom">
+        <p class="text-small-cs text-muted accordion-header">
+          <b> Score </b>
+          <span id="hideScoreSection" isOpen="true" class="hide-section"
+            >( Hide Section )</span
+          >
+        </p>
+
+        <div id="slotScoreBody">
+          <p class="text-small-cs text-muted"><b>Slot 1</b></p>
+          <div class="input-group input-group-sm mb-2">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="score slot 1"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              value="0"
+            />
+          </div>
+          <p class="text-small-cs text-muted"><b>Slot 2</b></p>
+          <div class="input-group input-group-sm mb-2">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="score slot 2"
+              aria-label="Username"
+              aria-describedby="basic-addon2"
+              value="0"
+            />
+          </div>
+          <p class="text-small-cs text-muted"><b>Slot 3</b></p>
+          <div class="input-group input-group-sm mb-2">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="score slot 3"
+              aria-label="Username"
+              aria-describedby="basic-addon3"
+              value="0"
+            />
+          </div>
+          <p class="text-small-cs text-muted"><b>Slot 4</b></p>
+          <div class="input-group input-group-sm mb-2">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="score slot 4"
+              aria-label="Username"
+              aria-describedby="basic-addon4"
+              value="0"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="kontrol-panel-body border-bottom">
+        <p class="text-small-cs text-muted accordion-header">
+          <b> Pertanyaan </b>
+          <span id="hidePertanyaanSection" isOpen="true" class="hide-section"
+            >( Hide Section )</span
+          >
+        </p>
+
+        <div id="slotPertanyaanBody">
+          <p class="text-small-cs text-muted mb-3">
+            <b> Catatan: </b>
+            <span
+              >Upload pertanyaan dengan file .txt dan aturan penulisan
+              pertanyaannya adalah
+            </span>
+            <span
+              >format pertanyaan pertanyaan|pilihan A|pilihan B|pilihan
+              C|pilihan D|jawaban pertanyaan|pilihan A|pilihan B|pilihan
+              C|pilihan D|jawaban
+            </span>
+          </p>
+          <div class="input-group input-group-sm">
+            <input
+              type="file"
+              class="form-control"
+              id="inputPertanyaan"
+              aria-describedby="inputGroupFileAddon04"
+              aria-label="Upload"
+            />
+          </div>
+          <p class="text-small-cs link-download" id="download-question">
+            Download contoh pertanyaan
+          </p>
+        </div>
+      </div>
+
+      <div class="kontrol-panel-body border-bottom">
+        <p class="text-small-cs text-muted accordion-header">
+          <b> Suara </b>
+          <span id="hideSuaraSection" isOpen="true" class="hide-section"
+            >( Hide Section )</span
+          >
+        </p>
+
+        <div id="slotSuaraBody">
+          <p class="text-small-cs text-muted"><b>Slot 1</b></p>
+          <div class="input-group input-group-sm mb-2">
+            <div class="input-group input-group-sm">
+              <input
+                type="file"
+                class="form-control"
+                id="inputSuaraSlot1"
+                aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload"
+              />
+            </div>
+          </div>
+
+          <p class="text-small-cs text-muted"><b>Slot 2</b></p>
+          <div class="input-group input-group-sm mb-2">
+            <div class="input-group input-group-sm">
+              <input
+                type="file"
+                class="form-control"
+                id="inputSuaraSlot2"
+                aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload"
+              />
+            </div>
+          </div>
+
+          <p class="text-small-cs text-muted"><b>Slot 3</b></p>
+          <div class="input-group input-group-sm mb-2">
+            <div class="input-group input-group-sm">
+              <input
+                type="file"
+                class="form-control"
+                id="inputSuaraSlot3"
+                aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload"
+              />
+            </div>
+          </div>
+
+          <p class="text-small-cs text-muted"><b>Slot 4</b></p>
+          <div class="input-group input-group-sm mb-2">
+            <div class="input-group input-group-sm">
+              <input
+                type="file"
+                class="form-control"
+                id="inputSuaraSlot4"
+                aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+      integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="global.js"></script>
+    <script src="socket.js"></script>
+  </body>
+</html>
